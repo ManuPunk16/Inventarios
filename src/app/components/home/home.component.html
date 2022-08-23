@@ -1,0 +1,38 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button>
+          <mat-icon (click)="opened=!opened">menu</mat-icon>
+        </button>
+      </div>
+      <h1 [routerLink]="['']">SICJ</h1>
+      <span class="menu-spacer"></span>
+      <div fxHide="true" fxHide.gt-sm="false">
+        <a mat-button [routerLink]="['/Activos']"> Activos </a>
+        <a mat-button [routerLink]="['/Bajas']"> Bajas </a>
+        <a mat-button [routerLink]="['/Transferencias']"> Transferencias </a>
+      </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <span style="font-size: 12px;">SICJ helps you easily manage your contacts</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [(opened)]="opened" (opened)="events.push('open!')"
+    (closed)="events.push('close!')">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/Activos']"> Activos </a>
+        <a mat-list-item [routerLink]="['/Bajas']"> Bajas </a>
+        <a mat-list-item [routerLink]="['/Transferencias']"> Transferencias </a>
+        <a mat-list-item (click)="opened=!opened" href="" mat-list-item>Close</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
