@@ -3,8 +3,8 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  height: 67vh;
-  background-color: aqua;
+  height: 67.7vh;
+  overflow: hidden;
 }
 
 .main-div{
@@ -20,6 +20,15 @@ img{
   margin-right: auto;
   width: 250px;
   height: 250px;
+}
+
+.container {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
 }
 
 .login-button{
