@@ -24,7 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { MatCard, MatCardModule } from '@angular/material/card';
     MatPaginatorModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

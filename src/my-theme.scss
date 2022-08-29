@@ -136,7 +136,7 @@ $md-mcgpalette3: (
 
 $my-primary: mat.define-palette($md-mcgpalette0, 500);
 $my-accent: mat.define-palette($md-mcgpalette1, 500);
-$my-warn: mat.define-palette(mat.$red-palette, 900);
+$my-warn: mat.define-palette($md-mcgpalette2, 900);
 
 $my-theme: mat.define-light-theme((
  color: (

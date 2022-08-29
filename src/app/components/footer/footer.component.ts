@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  logoPath: string = "../../assets/LOGO GOBIERNO DE CAMPECHE_ESCUDO_HORIZONTAL_BLANCO.png";
+
   constructor() { }
 
   ngOnInit(): void {
